@@ -243,8 +243,8 @@ var array = [32425];
 var myListener = function (event) {
   var d = new Date();
   var n = d.getMilliseconds() + 413;
-  var pos = parseInt(event.pageY + n)*7493;
-  var pos2 = parseInt(event.pageX + n)*8425;
+  var pos = (event.pageY + n)*7493;
+  var pos2 = (event.pageX + n)*8425;
   array.push(pos, pos2);
 };
 
