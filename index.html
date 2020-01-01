@@ -1,0 +1,271 @@
+<html>
+<head>
+
+<style>
+ .square {
+     z-index: 20;
+     position: absolute;
+     top: 100px;
+     left: 40px;
+     animation: go 5s forwards;
+     animation-iteration-count: 1;
+     height: 50px;
+     width: 50px;
+     background: blue;
+     opacity: 0.0;
+}
+ @keyframes go {
+     from {
+         transform: translate(0px, 0px);
+         width: 50px;
+         opacity: 1.0;
+    }
+     to {
+         transform: translate(690px, 500px);
+         width: 0px;
+         height: 0px;
+         opacity: 0.7;
+    }
+}
+ .square2 {
+     z-index: 20;
+     position: absolute;
+     top: 400px;
+     left: 400px;
+     animation: go2 5s reverse;
+     animation-iteration-count: 1;
+     height: 50px;
+     width: 50px;
+     background: blue;
+     opacity: 0.0;
+     animation-delay: 5s;
+}
+ @keyframes go2 {
+     0% {
+         transform: translate(0px, 0px);
+         width: 50px;
+         height: 50px;
+         opacity: 1.0;
+    }
+     40% {
+         transform: translate(690px, 300px);
+         width: 10px;
+         height: 10px;
+         opacity: 0.7;
+    }
+     70% {
+         transform: translate(0px, 600px);
+         width: 70px;
+         height: 70px;
+         opacity: 0.7;
+    }
+     100% {
+         transform: translate(0px, 700px);
+         width: 70px;
+         height: 70px;
+         opacity: 0.0;
+    }
+}
+ .square3 {
+     z-index: 20;
+     position: absolute;
+     top: 700px;
+     left: 810px;
+     animation: go3 5s forwards;
+     animation-iteration-count: 1;
+     height: 50px;
+     width: 50px;
+     background: blue;
+     opacity: 0.0;
+     animation-delay: 5s;
+}
+ @keyframes go3 {
+     from {
+         transform: translate(0px, 0px);
+         width: 50px;
+         opacity: 1.0;
+    }
+     to {
+         transform: translate(-690px, -500px);
+         width: 0px;
+         height: 0px;
+         opacity: 0.7;
+    }
+}
+ .square4 {
+     z-index: 20;
+     position: absolute;
+     top: 300px;
+     left: 300px;
+     animation: go4 5s forwards;
+     animation-iteration-count: 1;
+     height: 50px;
+     width: 50px;
+     background: blue;
+     opacity: 0.0;
+     animation-delay: 10s;
+}
+ @keyframes go4 {
+     from {
+         transform: translate(0px, 0px);
+         width: 50px;
+         opacity: 1.0;
+    }
+     to {
+         transform: translate(690px, 500px);
+         width: 0px;
+         height: 0px;
+         opacity: 0.7;
+    }
+}
+ .square5 {
+     z-index: 20;
+     position: absolute;
+     top: 100px;
+     left: 40px;
+     animation: go5 5s reverse;
+     animation-iteration-count: 1;
+     height: 50px;
+     width: 50px;
+     background: blue;
+     opacity: 0.0;
+     animation-delay: 10s;
+}
+ @keyframes go5 {
+     from {
+         transform: translate(0px, 0px);
+         width: 50px;
+         opacity: 1.0;
+    }
+     to {
+         transform: translate(690px, 500px);
+         width: 0px;
+         height: 0px;
+         opacity: 0.7;
+    }
+}
+ .square6 {
+     z-index: 20;
+     position: absolute;
+     top: 100px;
+     left: 40px;
+     animation: go6 5s reverse;
+     animation-iteration-count: 1;
+     height: 10px;
+     width: 10px;
+     background: blue;
+     opacity: 0.0;
+     animation-delay: 15s;
+}
+ @keyframes go6 {
+     0% {
+         transform: translate(0px, 0px);
+         width: 50px;
+         height: 50px;
+         opacity: 1.0;
+    }
+     40% {
+         transform: translate(690px, 300px);
+         width: 10px;
+         height: 10px;
+         opacity: 0.7;
+    }
+     90% {
+         transform: translate(0px, 600px);
+         width: 30px;
+         height: 30px;
+         opacity: 0.7;
+    }
+     100% {
+         transform: translate(0px, 700px);
+         width: 70px;
+         height: 70px;
+         opacity: 0.0;
+    }
+}
+ .square7 {
+     z-index: 20;
+     position: absolute;
+     top: 100px;
+     left: 40px;
+     animation: go 4s forwards;
+     animation-iteration-count: 1;
+     height: 50px;
+     width: 50px;
+     background: blue;
+     opacity: 0.0;
+     animation-delay: 20s;
+}
+ .square8 {
+     z-index: 20;
+     position: absolute;
+     top: 100px;
+     left: 40px;
+     animation: go 5s reverse;
+     animation-iteration-count: 1;
+     height: 50px;
+     width: 50px;
+     background: blue;
+     opacity: 0.0;
+     animation-delay: 22s;
+}
+ body {
+     font-family: sans-serif;
+}
+ #start {
+     height: 20px;
+     width: 60px;
+     border: 1px solid black;
+     font-size: 10px;
+     cursor: pointer;
+     padding: 5px;
+     display: inline;
+}
+</style>
+</head>
+<body>
+
+<h1>Aggravating random number generator</h1>
+If you can click the blue square, you'll get a very pseudorandom number. Don't worry, it will be back.
+<div id="start" onclick="location.reload()">Start again</div>
+
+<div class="square" onclick="stop()"></div>
+<div class="square2" onclick="stop()"></div>
+<div class="square3" onclick="stop()"></div>
+<div class="square4" onclick="stop()"></div>
+<div class="square5" onclick="stop()"></div>
+<div class="square6" onclick="stop()"></div>
+<div class="square7" onclick="stop()"></div>
+<div class="square8" id="square8" onclick="stop()"></div>
+
+<script>
+var array = [32425];
+var myListener = function (event) {
+  var d = new Date();
+  var n = d.getMilliseconds() + 413;
+  var pos = parseInt(event.pageY + n)*7493;
+  var pos2 = parseInt(event.pageX + n)*8425;
+  array.push(pos, pos2);
+};
+
+document.addEventListener('mousemove', myListener, false);
+
+function stop() {
+  var num=array[Math.ceil(array.length / 2)].toString();
+  alert("your random number is " + num.substring(num.length-5, num.length));
+  location.reload();
+}
+
+window.onload = function () {
+  var lastAnimation = document.getElementById("square8");
+  lastAnimation.addEventListener("webkitAnimationEnd", endFunction);
+  lastAnimation.addEventListener("animationend", endFunction);
+};
+
+function endFunction() {
+  alert("You'll need to start again.");
+  location.reload();
+}
+</script>
+</body>
+</html>
